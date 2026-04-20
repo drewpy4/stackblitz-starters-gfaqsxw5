@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
 export default function StudyHubApp() {
-    const { useMemo, useState } = React;
   
     const modules = [
       {
@@ -608,8 +607,8 @@ export default function StudyHubApp() {
     const currentModule = modules.find((m) => m.id === activeModule) || modules[0];
     const currentLecture = currentModule.lectures.find((l) => l.id === activeLecture) || currentModule.lectures[0];
     const currentQuiz = moduleQuiz.find((q) => q.id === activeModule);
-  
-    const scoreQuiz = (quizId) => {
+
+    const scoreQuiz = (quizId: string) => {
       const quiz = moduleQuiz.find((q) => q.id === quizId);
       if (!quiz) return { correct: 0, total: 0 };
       let correct = 0;
