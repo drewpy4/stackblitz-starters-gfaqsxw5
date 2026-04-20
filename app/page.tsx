@@ -1492,9 +1492,6 @@ export default function StudyHubApp() {
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">Course Deliverable</div>
               <h1 className="mt-1 text-3xl font-bold tracking-tight">Final Study Hub</h1>
-              <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Built from the full lecture summary packet. One page per lecture — use Lectures for review, Module Quiz for active recall, and Final Practice for exam prep.
-              </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {navButton("Home", "home")}
