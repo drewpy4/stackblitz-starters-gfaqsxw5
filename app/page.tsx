@@ -1765,7 +1765,7 @@ export default function StudyHubApp() {
               Open the full AI-powered practice doc to test yourself with comparisons, frameworks, and application questions.
             </p>
             <a
-              href="https://opal.google/app/1GKdP33f_Snq38Mgntt2B3umqtPtdvKqC"
+              href="https://v0-mo302-exam-simulator.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
