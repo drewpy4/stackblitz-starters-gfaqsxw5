@@ -583,7 +583,7 @@ export default function StudyHubApp() {
       }
     ];
   
-    const moduleQuiz = useMemo(() => modules.map((module) => ({
+  const moduleQuiz = useMemo(() => modules.map(...), [modules]);
       id: module.id,
       title: `${module.title} Check`,
       questions: module.lectures.flatMap((lecture) =>
@@ -602,7 +602,7 @@ export default function StudyHubApp() {
     const [activeModule, setActiveModule] = useState(modules[0].id);
     const [activeLecture, setActiveLecture] = useState(modules[0].lectures[0].id);
     const [revealed, setRevealed] = useState({});
-    const [quizAnswers, setQuizAnswers] = useState({});
+    const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>({});
   
     const currentModule = modules.find((m) => m.id === activeModule) || modules[0];
     const currentLecture = currentModule.lectures.find((l) => l.id === activeLecture) || currentModule.lectures[0];
