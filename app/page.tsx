@@ -1730,7 +1730,7 @@ export default function StudyHubApp() {
                     <div key={q.prompt} className="rounded-3xl bg-slate-50 p-5 ring-1 ring-slate-200">
                       <div className="text-sm font-semibold text-slate-900">{index + 1}. {q.prompt}</div>
                       <div className="mt-4 grid gap-3 md:grid-cols-2">
-                        {q.options.map((option, i) => {
+                        {(q.options ?? []).map((option, i) => {
                           const isCorrect = selected !== undefined && q.answer === i;
                           const isWrongChoice = selected === i && q.answer !== i;
                           return (
